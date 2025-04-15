@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Change a point color</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+    canvas {
+      display: block;
+      margin: 0 auto;
+    }
+    .controls {
+      margin-top: 20px;
+    }
+    img.decor {
+      margin-top: 20px;
+      width: 300px;
+    }
+  </style>
+</head>
+
+<body onload="main()">
+ 
+  <canvas id="webgl" width="400" height="400">
+    Please use a browser that supports "canvas"
+  </canvas>
+
+ 
+  <div class="controls">
+    <button type="button" id="clear">Clear Canvas</button>
+    <button type="button" id="pointMode">Point</button>
+    <button type="button" id="triangleMode">Triangle</button>
+    <button type="button" id="circleMode">Circle</button>
+    <br><br>
+
+    <label for="segmentSlider">Circle Segments:</label>
+    <input type="range" id="segmentSlider" min="3" max="60" value="20">
+    <br><br>
+
+    <button type="button" id="white">White</button>
+    <br><br>
+
+    <label for="redSlider">Red:</label>
+    <input type="range" id="redSlider" class="colorSlider" min="0" max="100" value="100"><br>
+
+    <label for="greenSlider">Green:</label>
+    <input type="range" id="greenSlider" class="colorSlider" min="0" max="100" value="0"><br>
+
+    <label for="blueSlider">Blue:</label>
+    <input type="range" id="blueSlider" class="colorSlider" min="0" max="100" value="0"><br><br>
+
+    <label for="sizeSlider">Size:</label>
+    <input type="range" id="sizeSlider" class="sizeSlider" min="1" max="40" value="10">
+  </div>
+
+
+  <img src="rainbow.png" alt="Decorative PNG" class="decor">
+
+ 
+  <script src="lib/webgl-utils.js"></script>
+  <script src="lib/webgl-debug.js"></script>
+  <script src="lib/cuon-utils.js"></script>
+  <script src="coloredAG.js"></script>
+</body>
+</html>
